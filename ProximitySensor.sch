@@ -1,0 +1,548 @@
+EESchema Schematic File Version 2
+LIBS:device
+LIBS:switches
+LIBS:relays
+LIBS:motors
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:wire-gost
+LIBS:power
+LIBS:conn-gost
+LIBS:mosfet
+LIBS:ProximitySensor-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "Proximity/Distance/Magnet sensor"
+Date ""
+Rev "1.0"
+Comp ""
+Comment1 ""
+Comment2 "Samaryn"
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_3 X1
+U 1 1 59AC4ED8
+P 1200 2950
+F 0 "X1" H 1200 3450 79  0000 C CNN
+F 1 "CONN_3" H 1200 2450 79  0001 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Philmore_TB133_03x5mm_Straight" H 1800 3450 79  0001 C CNN
+F 3 "" H 1800 2450 79  0001 C CNN
+F 4 "Vcc" H 1000 3050 79  0000 C CNN "PIN1"
+F 5 "Gnd" H 1000 2850 79  0000 C CNN "PIN2"
+F 6 "Out" H 1000 2650 79  0000 C CNN "PIN3"
+	1    1200 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L L78L05_SOT89 U1
+U 1 1 59AC504D
+P 3700 2850
+F 0 "U1" H 3550 2975 50  0000 C CNN
+F 1 "L78L05_SOT89" H 3675 2975 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-89-3_Handsoldering" H 3700 3050 50  0001 C CIN
+F 3 "" H 3700 2800 50  0001 C CNN
+	1    3700 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L LM393 U2
+U 1 1 59AC51AA
+P 6250 3700
+F 0 "U2" H 6400 3850 50  0000 C CNN
+F 1 "LM393" H 6500 3550 50  0000 C CNN
+F 2 "Housings_SOIC:SOIC-8_3.9x4.9mm_Pitch1.27mm" H 6250 3700 50  0001 C CNN
+F 3 "" H 6250 3700 50  0001 C CNN
+	1    6250 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C3
+U 1 1 59AC5425
+P 5850 4000
+F 0 "C3" H 5875 4100 50  0000 L CNN
+F 1 "100nF" H 5875 3900 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 5888 3850 50  0001 C CNN
+F 3 "" H 5850 4000 50  0001 C CNN
+	1    5850 4000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_NMOS_GSD Q2
+U 1 1 59AC54BC
+P 8900 3700
+F 0 "Q2" H 9100 3750 50  0000 L CNN
+F 1 "Q_NMOS_GSD" H 9100 3650 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 9100 3800 50  0001 C CNN
+F 3 "" H 8900 3700 50  0001 C CNN
+	1    8900 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED_ALT D2
+U 1 1 59AC5C24
+P 4500 3650
+F 0 "D2" V 4500 3750 50  0000 C CNN
+F 1 "LED_POWER" H 4450 3850 50  0000 C CNN
+F 2 "LEDs:LED_D1.8mm_W3.3mm_H2.4mm" H 4500 3650 50  0001 C CNN
+F 3 "" H 4500 3650 50  0001 C CNN
+	1    4500 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R2
+U 1 1 59AC5D4C
+P 4500 3250
+F 0 "R2" H 4600 3250 50  0000 C CNN
+F 1 "470R" V 4500 3250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4430 3250 50  0001 C CNN
+F 3 "" H 4500 3250 50  0001 C CNN
+	1    4500 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R11
+U 1 1 59AC5E24
+P 8850 2850
+F 0 "R11" V 8930 2850 50  0000 C CNN
+F 1 "470R" V 8850 2850 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8780 2850 50  0001 C CNN
+F 3 "" H 8850 2850 50  0001 C CNN
+	1    8850 2850
+	0    1    1    0   
+$EndComp
+$Comp
+L R R3
+U 1 1 59AC5E56
+P 4900 3100
+F 0 "R3" H 5000 3100 50  0000 C CNN
+F 1 "10k" V 4900 3100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 4830 3100 50  0001 C CNN
+F 3 "" H 4900 3100 50  0001 C CNN
+	1    4900 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R8
+U 1 1 59AC5F1A
+P 8150 3250
+F 0 "R8" H 8050 3250 50  0000 C CNN
+F 1 "5k" V 8150 3250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8080 3250 50  0001 C CNN
+F 3 "" H 8150 3250 50  0001 C CNN
+	1    8150 3250
+	-1   0    0    1   
+$EndComp
+$Comp
+L POT RV1
+U 1 1 59AC5F30
+P 5400 3800
+F 0 "RV1" H 5250 3800 50  0000 C CNN
+F 1 "10k" V 5400 3800 50  0000 C CNN
+F 2 "Potentiometers:Potentiometer_Trimmer_Vishay_T73YP_Horizontal" H 5400 3800 50  0001 C CNN
+F 3 "" H 5400 3800 50  0001 C CNN
+	1    5400 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Q_PMOS_GSD Q1
+U 1 1 59AC70C4
+P 2700 2950
+F 0 "Q1" V 3050 2900 50  0000 L CNN
+F 1 "Q_PMOS_GSD" V 2950 2700 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-23_Handsoldering" H 2900 3050 50  0001 C CNN
+F 3 "" H 2700 2950 50  0001 C CNN
+	1    2700 2950
+	0    -1   -1   0   
+$EndComp
+Text Label 4350 2850 0    60   ~ 0
+5v
+Text Label 2150 2850 0    60   ~ 0
+in_v
+$Comp
+L C C2
+U 1 1 59AC7C64
+P 4150 3200
+F 0 "C2" H 4175 3300 50  0000 L CNN
+F 1 "0,1uF" H 4175 3100 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 4188 3050 50  0001 C CNN
+F 3 "" H 4150 3200 50  0001 C CNN
+	1    4150 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C1
+U 1 1 59AC7CB3
+P 3250 3150
+F 0 "C1" H 3275 3250 50  0000 L CNN
+F 1 "0,33uF" H 3275 3050 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 3288 3000 50  0001 C CNN
+F 3 "" H 3250 3150 50  0001 C CNN
+F 4 "25v" H 3350 2950 60  0000 C CNN "Поле4"
+	1    3250 3150
+	1    0    0    -1  
+$EndComp
+Text Label 4000 4250 0    60   ~ 0
+Gnd
+$Comp
+L R R1
+U 1 1 59B42C2F
+P 2700 3600
+F 0 "R1" H 2800 3600 50  0000 C CNN
+F 1 "100k" V 2700 3600 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 2630 3600 50  0001 C CNN
+F 3 "" H 2700 3600 50  0001 C CNN
+	1    2700 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L D_Zener D1
+U 1 1 59B42EFA
+P 2950 3150
+F 0 "D1" V 2950 3250 50  0000 C CNN
+F 1 "D_Zener" H 2950 3050 50  0000 C CNN
+F 2 "Capacitors_SMD:C_0805_HandSoldering" H 2950 3150 50  0001 C CNN
+F 3 "" H 2950 3150 50  0001 C CNN
+	1    2950 3150
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_3 X2
+U 1 1 59B43622
+P 10300 2950
+F 0 "X2" H 10300 3450 79  0000 C CNN
+F 1 "CONN_3" H 10300 2450 79  0001 C CNN
+F 2 "Connectors_Terminal_Blocks:TerminalBlock_Philmore_TB133_03x5mm_Straight" H 10900 3450 79  0001 C CNN
+F 3 "" H 10900 2450 79  0001 C CNN
+F 4 "5v" H 10100 3050 79  0000 C CNN "PIN1"
+F 5 "Gnd" H 10100 2850 79  0000 C CNN "PIN2"
+F 6 "Sig" H 10100 2650 79  0000 C CNN "PIN3"
+	1    10300 2950
+	-1   0    0    -1  
+$EndComp
+$Comp
+L R R9
+U 1 1 59B52FC0
+P 8500 3700
+F 0 "R9" V 8580 3700 50  0000 C CNN
+F 1 "100R" V 8500 3700 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8430 3700 50  0001 C CNN
+F 3 "" H 8500 3700 50  0001 C CNN
+	1    8500 3700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Conn_01x02_Male J3
+U 1 1 59B53E29
+P 9200 2650
+F 0 "J3" V 9250 2750 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 9200 2450 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 9200 2650 50  0001 C CNN
+F 3 "ON - Photo" V 9000 2450 50  0000 C CNN
+F 4 "OFF - Distance/Magnet" V 9100 2400 60  0000 C CNN "Поле4"
+	1    9200 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L Conn_01x02_Male J1
+U 1 1 59B54B64
+P 5100 3350
+F 0 "J1" H 5100 3450 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 5100 3150 50  0001 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.00mm" H 5100 3350 50  0001 C CNN
+F 3 "" H 5100 3350 50  0001 C CNN
+F 4 "ON - Distance/Magnet" H 5000 2600 60  0000 C CNN "Поле4"
+F 5 "OFF - Photo" H 5150 2750 60  0000 C CNN "Поле5"
+	1    5100 3350
+	-1   0    0    1   
+$EndComp
+$Comp
+L LM393 U2
+U 2 1 59B594A1
+P 7700 3700
+F 0 "U2" H 7850 3850 50  0000 C CNN
+F 1 "LM393" H 7950 3550 50  0000 C CNN
+F 2 "" H 7700 3700 50  0001 C CNN
+F 3 "" H 7700 3700 50  0001 C CNN
+	2    7700 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED_ALT D3
+U 1 1 59B5A6C9
+P 7000 3450
+F 0 "D3" V 7000 3550 50  0000 C CNN
+F 1 "LED_SIGNAL" H 7050 3650 50  0000 C CNN
+F 2 "LEDs:LED_D1.8mm_W3.3mm_H2.4mm" H 7000 3450 50  0001 C CNN
+F 3 "" H 7000 3450 50  0001 C CNN
+	1    7000 3450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R5
+U 1 1 59B5A9FE
+P 7000 3100
+F 0 "R5" H 7100 3100 50  0000 C CNN
+F 1 "470R" V 7000 3100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6930 3100 50  0001 C CNN
+F 3 "" H 7000 3100 50  0001 C CNN
+	1    7000 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4500 3400 4500 3500
+Wire Wire Line
+	4900 3350 4900 4650
+Wire Wire Line
+	4500 2850 4500 3100
+Connection ~ 4500 2850
+Wire Wire Line
+	3700 4250 3700 3150
+Wire Wire Line
+	2300 4250 9400 4250
+Wire Wire Line
+	4500 4250 4500 3800
+Connection ~ 4500 4250
+Wire Wire Line
+	5400 3950 5400 4250
+Wire Wire Line
+	5550 3800 5950 3800
+Wire Wire Line
+	5400 2850 5400 3650
+Connection ~ 4900 2850
+Wire Wire Line
+	4900 3600 5950 3600
+Connection ~ 4900 3600
+Wire Wire Line
+	6150 4000 6150 4250
+Connection ~ 5400 4250
+Wire Wire Line
+	6150 3400 6150 2400
+Wire Wire Line
+	3250 2400 8600 2400
+Wire Wire Line
+	3250 2400 3250 3000
+Wire Wire Line
+	2900 2850 3400 2850
+Wire Wire Line
+	5850 4150 5850 4250
+Connection ~ 5850 4250
+Connection ~ 6150 4250
+Wire Wire Line
+	2700 3150 2700 3450
+Wire Wire Line
+	2700 3750 2700 4250
+Connection ~ 3700 4250
+Connection ~ 3250 2850
+Wire Wire Line
+	2000 2850 2500 2850
+Wire Wire Line
+	2000 3050 2300 3050
+Wire Wire Line
+	2300 3050 2300 4250
+Connection ~ 2700 4250
+Wire Wire Line
+	2000 3250 2000 3250
+Wire Wire Line
+	2000 3250 2000 4500
+Wire Wire Line
+	2000 4500 9300 4500
+Wire Wire Line
+	9300 4500 9300 3400
+Wire Wire Line
+	3250 3300 3250 3450
+Wire Wire Line
+	3250 3450 4150 3450
+Connection ~ 3700 3450
+Wire Wire Line
+	4150 3450 4150 3350
+Wire Wire Line
+	4150 3050 4150 2850
+Connection ~ 4150 2850
+Wire Wire Line
+	4000 2850 8700 2850
+Wire Wire Line
+	2950 3300 2950 3350
+Wire Wire Line
+	2950 3350 2700 3350
+Connection ~ 2700 3350
+Wire Wire Line
+	2950 3000 2950 2850
+Connection ~ 2950 2850
+Wire Wire Line
+	9400 4250 9400 3050
+Wire Wire Line
+	8650 3700 8700 3700
+Wire Wire Line
+	9000 2850 9100 2850
+Wire Wire Line
+	9200 2850 9500 2850
+Wire Wire Line
+	9400 3050 9500 3050
+Wire Wire Line
+	4900 4650 9500 4650
+Wire Wire Line
+	9500 4650 9500 3250
+Wire Wire Line
+	4900 2950 4900 2850
+Wire Wire Line
+	5850 3800 5850 3850
+Connection ~ 5850 3800
+Wire Wire Line
+	6550 3700 7000 3700
+Wire Wire Line
+	7000 3600 7000 5300
+Wire Wire Line
+	7000 3300 7000 3250
+Connection ~ 7600 4250
+Wire Wire Line
+	7000 3800 7400 3800
+Connection ~ 7000 3700
+$Comp
+L R R4
+U 1 1 59B713B5
+P 6700 3100
+F 0 "R4" H 6800 3100 50  0000 C CNN
+F 1 "5k" V 6700 3100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 6630 3100 50  0001 C CNN
+F 3 "" H 6700 3100 50  0001 C CNN
+	1    6700 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 3250 6700 3700
+Connection ~ 6700 3700
+Wire Wire Line
+	6700 2950 6700 2850
+Connection ~ 6700 2850
+Wire Wire Line
+	7000 2950 7000 2850
+Connection ~ 7000 2850
+$Comp
+L R R6
+U 1 1 59B7196A
+P 7250 3100
+F 0 "R6" H 7350 3100 50  0000 C CNN
+F 1 "5k" V 7250 3100 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7180 3100 50  0001 C CNN
+F 3 "" H 7250 3100 50  0001 C CNN
+	1    7250 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 2950 7250 2850
+Connection ~ 7250 2850
+$Comp
+L R R7
+U 1 1 59B71A56
+P 7250 4000
+F 0 "R7" H 7350 4000 50  0000 C CNN
+F 1 "5k" V 7250 4000 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 7180 4000 50  0001 C CNN
+F 3 "" H 7250 4000 50  0001 C CNN
+	1    7250 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7250 4150 7250 4250
+Connection ~ 7250 4250
+Wire Wire Line
+	7250 3250 7250 3850
+Wire Wire Line
+	7400 3600 7250 3600
+Connection ~ 7250 3600
+Wire Wire Line
+	9000 3900 9000 4250
+Connection ~ 9000 4250
+Wire Wire Line
+	7600 4000 7600 4250
+Wire Wire Line
+	9300 3400 8600 3400
+Wire Wire Line
+	9000 3400 9000 3500
+Wire Wire Line
+	8150 2400 8150 3100
+Connection ~ 6150 2400
+Wire Wire Line
+	7600 3400 7600 2400
+Connection ~ 7600 2400
+$Comp
+L R R10
+U 1 1 59B738C5
+P 8600 3250
+F 0 "R10" H 8450 3250 50  0000 C CNN
+F 1 "5k" V 8600 3250 50  0000 C CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" V 8530 3250 50  0001 C CNN
+F 3 "" H 8600 3250 50  0001 C CNN
+	1    8600 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	8600 2400 8600 3100
+Connection ~ 8150 2400
+Connection ~ 9000 3400
+$Comp
+L Conn_01x03_Male J2
+U 1 1 59B73F74
+P 7600 4900
+F 0 "J2" H 7600 5100 50  0000 C CNN
+F 1 "Conn_01x03_Male" H 7600 4700 50  0001 C CNN
+F 2 "" H 7600 4900 50  0001 C CNN
+F 3 "" H 7600 4900 50  0001 C CNN
+F 4 "LEFT - NORMAL" V 8100 4850 60  0000 C CNN "Поле4"
+F 5 "RIGHT - INVERTED" V 8250 4900 60  0000 C CNN "Поле5"
+	1    7600 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	7600 5100 7600 5300
+Wire Wire Line
+	7600 5300 8250 5300
+Wire Wire Line
+	8250 5300 8250 3700
+Wire Wire Line
+	8250 3700 8350 3700
+Wire Wire Line
+	7700 5100 7700 5250
+Wire Wire Line
+	7700 5250 8150 5250
+Wire Wire Line
+	8150 5250 8150 3400
+Wire Wire Line
+	8150 3700 8000 3700
+Connection ~ 8150 3700
+Wire Wire Line
+	7500 5100 7500 5300
+Wire Wire Line
+	7500 5300 7000 5300
+Connection ~ 7000 3800
+$EndSCHEMATC
