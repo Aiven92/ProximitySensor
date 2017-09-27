@@ -2,7 +2,7 @@
 <export version="D">
   <design>
     <source>/home/aiven/Документы/KiCAD/InterBlud/ProximitySensor/ProximitySensor.sch</source>
-    <date>Вс 17 сен 2017 19:42:36</date>
+    <date>Ср 27 сен 2017 01:07:45</date>
     <tool>Eeschema 4.0.7-e2-6376~58~ubuntu16.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -46,14 +46,14 @@
       <tstamp>59AC51AA</tstamp>
     </comp>
     <comp ref="C3">
-      <value>100nF</value>
+      <value>0,1uF</value>
       <footprint>Capacitors_SMD:C_0805_HandSoldering</footprint>
       <libsource lib="device" part="C"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59AC5425</tstamp>
     </comp>
     <comp ref="Q2">
-      <value>Q_NMOS_GSD</value>
+      <value>IRLML2803_NMOS</value>
       <footprint>TO_SOT_Packages_SMD:SOT-23_Handsoldering</footprint>
       <libsource lib="device" part="Q_NMOS_GSD"/>
       <sheetpath names="/" tstamps="/"/>
@@ -67,28 +67,28 @@
       <tstamp>59AC5C24</tstamp>
     </comp>
     <comp ref="R2">
-      <value>470R</value>
+      <value>1K</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59AC5D4C</tstamp>
     </comp>
     <comp ref="R11">
-      <value>470R</value>
+      <value>1K</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59AC5E24</tstamp>
     </comp>
     <comp ref="R3">
-      <value>10k</value>
+      <value>10K</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59AC5E56</tstamp>
     </comp>
     <comp ref="R8">
-      <value>5k</value>
+      <value>10K</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -102,7 +102,7 @@
       <tstamp>59AC5F30</tstamp>
     </comp>
     <comp ref="Q1">
-      <value>Q_PMOS_GSD</value>
+      <value>IRML6402_PMOS</value>
       <footprint>TO_SOT_Packages_SMD:SOT-23_Handsoldering</footprint>
       <libsource lib="device" part="Q_PMOS_GSD"/>
       <sheetpath names="/" tstamps="/"/>
@@ -161,9 +161,9 @@
     <comp ref="J3">
       <value>Conn_01x02_Male</value>
       <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
-      <datasheet>ON - Photo</datasheet>
+      <datasheet>OFF - Photo</datasheet>
       <fields>
-        <field name="Поле4">OFF - Distance/Magnet</field>
+        <field name="Поле4">ON - Distance/Magnet</field>
       </fields>
       <libsource lib="conn" part="Conn_01x02_Male"/>
       <sheetpath names="/" tstamps="/"/>
@@ -173,8 +173,8 @@
       <value>Conn_01x02_Male</value>
       <footprint>Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm</footprint>
       <fields>
-        <field name="Поле4">ON - Distance/Magnet</field>
-        <field name="Поле5">OFF - Photo</field>
+        <field name="Поле4">OFF - Distance/Magnet</field>
+        <field name="Поле5">ON - Photo</field>
       </fields>
       <libsource lib="conn" part="Conn_01x02_Male"/>
       <sheetpath names="/" tstamps="/"/>
@@ -188,35 +188,35 @@
       <tstamp>59B5A6C9</tstamp>
     </comp>
     <comp ref="R5">
-      <value>470R</value>
+      <value>1K</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59B5A9FE</tstamp>
     </comp>
     <comp ref="R4">
-      <value>5k</value>
+      <value>10K</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59B713B5</tstamp>
     </comp>
     <comp ref="R6">
-      <value>5k</value>
+      <value>10K</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59B7196A</tstamp>
     </comp>
     <comp ref="R7">
-      <value>5k</value>
+      <value>10K</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamp>59B71A56</tstamp>
     </comp>
     <comp ref="R10">
-      <value>5k</value>
+      <value>10K</value>
       <footprint>Resistors_SMD:R_0805_HandSoldering</footprint>
       <libsource lib="device" part="R"/>
       <sheetpath names="/" tstamps="/"/>
@@ -483,21 +483,21 @@
       <node ref="D3" pin="2"/>
     </net>
     <net code="2" name="Net-(D3-Pad1)">
-      <node ref="J2" pin="3"/>
       <node ref="U2" pin="2"/>
+      <node ref="J2" pin="3"/>
       <node ref="U2" pin="7"/>
       <node ref="R4" pin="2"/>
       <node ref="D3" pin="1"/>
     </net>
     <net code="3" name="Net-(R6-Pad2)">
-      <node ref="R7" pin="1"/>
       <node ref="U2" pin="3"/>
+      <node ref="R7" pin="1"/>
       <node ref="R6" pin="2"/>
     </net>
     <net code="4" name="Net-(J3-Pad1)">
-      <node ref="R11" pin="1"/>
       <node ref="X2" pin="1"/>
       <node ref="J3" pin="1"/>
+      <node ref="R11" pin="1"/>
     </net>
     <net code="5" name="Net-(D4-Pad1)">
       <node ref="R9" pin="2"/>
@@ -505,8 +505,8 @@
       <node ref="D4" pin="1"/>
     </net>
     <net code="6" name="Net-(Q2-Pad3)">
-      <node ref="Q2" pin="3"/>
       <node ref="R10" pin="1"/>
+      <node ref="Q2" pin="3"/>
       <node ref="X1" pin="3"/>
     </net>
     <net code="7" name="Net-(J2-Pad1)">
@@ -520,66 +520,66 @@
     </net>
     <net code="9" name="Net-(C3-Pad1)">
       <node ref="C3" pin="1"/>
-      <node ref="RV1" pin="2"/>
       <node ref="U2" pin="6"/>
+      <node ref="RV1" pin="2"/>
     </net>
     <net code="10" name="/in_v">
       <node ref="X1" pin="1"/>
       <node ref="Q1" pin="3"/>
     </net>
     <net code="11" name="Net-(J1-Pad2)">
-      <node ref="J1" pin="2"/>
       <node ref="R3" pin="2"/>
+      <node ref="J1" pin="2"/>
     </net>
     <net code="12" name="Net-(D1-Pad2)">
-      <node ref="R1" pin="1"/>
       <node ref="Q1" pin="1"/>
+      <node ref="R1" pin="1"/>
       <node ref="D1" pin="2"/>
     </net>
     <net code="13" name="/Gnd">
+      <node ref="Q2" pin="2"/>
+      <node ref="U2" pin="4"/>
       <node ref="U1" pin="2"/>
       <node ref="X1" pin="2"/>
       <node ref="C3" pin="2"/>
-      <node ref="U2" pin="4"/>
       <node ref="X2" pin="2"/>
-      <node ref="R1" pin="2"/>
       <node ref="R7" pin="2"/>
-      <node ref="Q2" pin="2"/>
       <node ref="D2" pin="1"/>
-      <node ref="C1" pin="2"/>
       <node ref="C2" pin="2"/>
       <node ref="D4" pin="2"/>
       <node ref="RV1" pin="3"/>
+      <node ref="R1" pin="2"/>
+      <node ref="C1" pin="2"/>
     </net>
     <net code="14" name="/5v">
-      <node ref="R6" pin="1"/>
       <node ref="R5" pin="1"/>
       <node ref="J3" pin="2"/>
-      <node ref="R4" pin="1"/>
       <node ref="R3" pin="1"/>
+      <node ref="R11" pin="2"/>
       <node ref="R2" pin="1"/>
+      <node ref="C2" pin="1"/>
       <node ref="U1" pin="1"/>
       <node ref="RV1" pin="1"/>
-      <node ref="C2" pin="1"/>
-      <node ref="R11" pin="2"/>
+      <node ref="R6" pin="1"/>
     </net>
     <net code="15" name="Net-(D2-Pad2)">
-      <node ref="R2" pin="2"/>
       <node ref="D2" pin="2"/>
+      <node ref="R2" pin="2"/>
     </net>
     <net code="16" name="/Vcc">
-      <node ref="Q1" pin="2"/>
-      <node ref="R8" pin="2"/>
-      <node ref="U1" pin="3"/>
-      <node ref="U2" pin="8"/>
-      <node ref="C1" pin="1"/>
+      <node ref="R4" pin="1"/>
       <node ref="D1" pin="1"/>
+      <node ref="C1" pin="1"/>
+      <node ref="Q1" pin="2"/>
+      <node ref="U1" pin="3"/>
+      <node ref="R8" pin="2"/>
+      <node ref="U2" pin="8"/>
       <node ref="R10" pin="2"/>
     </net>
     <net code="17" name="/sign">
-      <node ref="U2" pin="5"/>
       <node ref="J1" pin="1"/>
       <node ref="X2" pin="3"/>
+      <node ref="U2" pin="5"/>
     </net>
   </nets>
 </export>
